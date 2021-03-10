@@ -1,8 +1,11 @@
-# How To
+# The Problem
+This file solves the issue of the Steelseries Nimbus+ gamepad not being supported by Unity's new input system for MacOS. 
+
+# The Solution
 If you are just looking to get the Nimbus up and running, you should be able to put the NimbusCustom.cs file anywhere in your project's Assets folder and it should work from there, barring any namespace collisions, etc. For more information on how we got here, read on!
 
-# Adding Nimbus support for macOS in Unity
-This file solves the issue of the Steelseries Nimbus+ gamepad not being supported by Unity's new input system for MacOS. It should also illustrate how to set up any gamepad that isn't supported so that it will work as expected. It's not exhaustive; this is our first look at these systems, but it should hopefully be enough to get you going if you're stuck on this.
+# The Writeup - Adding Nimbus support for macOS in Unity
+This file fixes a specific problem but it should also illustrate how to set up any gamepad that isn't supported so that it will work as expected. It's not exhaustive; this is our first look at these systems, but it should hopefully be enough to get you going if you're stuck on this.
 
 The issue presents itself as the Nimbus+ not showing up as a gamepad (in Gamepad.current or Gamepad.all, etc). We get around that by creating a custom class that inherits from Gamepad and registers itself with Unity, telling Unity how to read it. This is done via a device state struct that inherits from IInputStateTypeInfo.
 
