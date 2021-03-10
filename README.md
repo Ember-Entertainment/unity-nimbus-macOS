@@ -12,3 +12,5 @@ Everything in the Input Debugger is useful for getting information, but a lot of
 
 You may need to play around with formats to get correct results. One issue we ran across was that Unity's Custom Device sample used an unsigned byte (BYTE) for the joystick axes. Using this for the Nimbus gave weird results where the axis would count from 0 to -1 on one side and then switch to 1 in the middle, then count back down to 0 on the other side. To fix this, we needed to switch the signed byte (SBYT) format.
 
+# Thanks
+Our engineer https://github.com/sunkicked did the research and implementation to make this fix happen!
